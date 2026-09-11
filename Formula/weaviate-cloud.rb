@@ -11,7 +11,7 @@ class WeaviateCloud < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/weaviate/weaviate-cloud/releases/download/v0.1.0/weaviate-cloud_0.1.0_darwin_amd64.tar.gz"
-      sha256 "ff20c4feb3838437e5dedce39de9bb6a3bca15c0a730d81820cb47534b26975e"
+      sha256 "038b2d48b300f53802c2c79f39e4f21161f0ce86916e2f22f4d327076d91b142"
 
       define_method(:install) do
         bin.install "wcloud"
@@ -19,7 +19,7 @@ class WeaviateCloud < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/weaviate/weaviate-cloud/releases/download/v0.1.0/weaviate-cloud_0.1.0_darwin_arm64.tar.gz"
-      sha256 "4c9dcde13ac7ebef93b9e5d70c44d206346e5b17b364caf2cd218752b9ff9c3a"
+      sha256 "5e67094ca1e7b3137a414b6f5d691035f668af2cf7a4f0e38c9f936faf035b8c"
 
       define_method(:install) do
         bin.install "wcloud"
@@ -30,14 +30,14 @@ class WeaviateCloud < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/weaviate/weaviate-cloud/releases/download/v0.1.0/weaviate-cloud_0.1.0_linux_amd64.tar.gz"
-      sha256 "b267d7569acdc4640a3e2748ee22a395e9a52db4a173a6f45ff7e3111ff75786"
+      sha256 "06757a90ed933a2fe75e802444fb7d8a08912aa07b26bb5c89daa0cdb89a26eb"
       define_method(:install) do
         bin.install "wcloud"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/weaviate/weaviate-cloud/releases/download/v0.1.0/weaviate-cloud_0.1.0_linux_arm64.tar.gz"
-      sha256 "2cf34fdf6349b66631a361f003de31ad2a65648e22296eb51b9668bc3d239f51"
+      sha256 "a387ffc772b8ad7fb69539d7e6966c8a63df7dde6d6abd63c55834066bb9cb47"
       define_method(:install) do
         bin.install "wcloud"
       end
