@@ -5,21 +5,21 @@
 class WeaviateCloud < Formula
   desc "Weaviate Cloud CLI — agent-first provisioning over the Weaviate Cloud API"
   homepage "https://weaviate.io"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/weaviate/weaviate-cloud/releases/download/v0.1.3/weaviate-cloud_0.1.3_darwin_amd64.tar.gz"
-      sha256 "8f624911aeb082a3b971955cf412d01d107ec1fff873239b9940786333d95e32"
+      url "https://github.com/weaviate/weaviate-cloud/releases/download/v0.1.4/weaviate-cloud_0.1.4_darwin_amd64.tar.gz"
+      sha256 "69723755903052d713e2707d0e56e96d707b841020e929f54a2cff416053cf8e"
 
       define_method(:install) do
         bin.install "wcloud"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/weaviate/weaviate-cloud/releases/download/v0.1.3/weaviate-cloud_0.1.3_darwin_arm64.tar.gz"
-      sha256 "e46cd20006727814b9100a6d4e23752dc8218d8d99d413f6f521b286608b23e0"
+      url "https://github.com/weaviate/weaviate-cloud/releases/download/v0.1.4/weaviate-cloud_0.1.4_darwin_arm64.tar.gz"
+      sha256 "c23aebc03c8e5c639d5da5749ddede2ca39966bf66b29e10086f9d167c51735f"
 
       define_method(:install) do
         bin.install "wcloud"
@@ -29,15 +29,15 @@ class WeaviateCloud < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/weaviate/weaviate-cloud/releases/download/v0.1.3/weaviate-cloud_0.1.3_linux_amd64.tar.gz"
-      sha256 "dcb5694c4b6764298b13ac9274cda88d8284cad54e4952dc6adc2f2994bb9b43"
+      url "https://github.com/weaviate/weaviate-cloud/releases/download/v0.1.4/weaviate-cloud_0.1.4_linux_amd64.tar.gz"
+      sha256 "83aabc2b742012172e23cebef524ec41a776e88e43ba55e5d4240fc822525724"
       define_method(:install) do
         bin.install "wcloud"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/weaviate/weaviate-cloud/releases/download/v0.1.3/weaviate-cloud_0.1.3_linux_arm64.tar.gz"
-      sha256 "388bd617fba3604df4e85a230c33f2e32e6c6b297fde11e99d41cbd7787048bb"
+      url "https://github.com/weaviate/weaviate-cloud/releases/download/v0.1.4/weaviate-cloud_0.1.4_linux_arm64.tar.gz"
+      sha256 "540bce2c319c1d1c0450b02d2126d20fec689e5425d6b575d55c6a855d7dff7e"
       define_method(:install) do
         bin.install "wcloud"
       end
